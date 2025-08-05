@@ -17,6 +17,13 @@ type ContactMutation = {
   favorite?: boolean;
 };
 
+type PrefecturesRecord = {
+  id?: string;
+  name?: string;
+  arriveFlag?: boolean;
+  firstDate?: Date;
+}
+
 export type ContactRecord = ContactMutation & {
   id: string;
   createdAt: string;
@@ -97,220 +104,384 @@ export async function deleteContact(id: string) {
 
 [
   {
-    avatar:
-      "https://sessionize.com/image/124e-400o400o2-wHVdAuNaxi8KJrgtN3ZKci.jpg",
-    first: "Shruti",
-    last: "Kapoor",
-    twitter: "@shrutikapoor08",
+    "name": "北海道",
+    "first": "北海",
+    "last": "道",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/1940-400o400o2-Enh9dnYmrLYhJSTTPSw3MH.jpg",
-    first: "Glenn",
-    last: "Reyes",
-    twitter: "@glnnrys",
+    "name": "青森県",
+    "first": "青森",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/9273-400o400o2-3tyrUE3HjsCHJLU5aUJCja.jpg",
-    first: "Ryan",
-    last: "Florence",
+    "name": "岩手県",
+    "first": "岩手",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/d14d-400o400o2-pyB229HyFPCnUcZhHf3kWS.png",
-    first: "Oscar",
-    last: "Newman",
-    twitter: "@__oscarnewman",
+    "name": "宮城県",
+    "first": "宮城",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/fd45-400o400o2-fw91uCdGU9hFP334dnyVCr.jpg",
-    first: "Michael",
-    last: "Jackson",
+    "name": "秋田県",
+    "first": "秋田",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/b07e-400o400o2-KgNRF3S9sD5ZR4UsG7hG4g.jpg",
-    first: "Christopher",
-    last: "Chedeau",
-    twitter: "@Vjeux",
+    "name": "山形県",
+    "first": "山形",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/262f-400o400o2-UBPQueK3fayaCmsyUc1Ljf.jpg",
-    first: "Cameron",
-    last: "Matheson",
-    twitter: "@cmatheson",
+    "name": "福島県",
+    "first": "福島",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/820b-400o400o2-Ja1KDrBAu5NzYTPLSC3GW8.jpg",
-    first: "Brooks",
-    last: "Lybrand",
-    twitter: "@BrooksLybrand",
+    "name": "茨城県",
+    "first": "茨城",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/df38-400o400o2-JwbChVUj6V7DwZMc9vJEHc.jpg",
-    first: "Alex",
-    last: "Anderson",
-    twitter: "@ralex1993",
+    "name": "栃木県",
+    "first": "栃木",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/5578-400o400o2-BMT43t5kd2U1XstaNnM6Ax.jpg",
-    first: "Kent C.",
-    last: "Dodds",
-    twitter: "@kentcdodds",
+    "name": "群馬県",
+    "first": "群馬",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/c9d5-400o400o2-Sri5qnQmscaJXVB8m3VBgf.jpg",
-    first: "Nevi",
-    last: "Shah",
-    twitter: "@nevikashah",
+    "name": "埼玉県",
+    "first": "埼玉",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/2694-400o400o2-MYYTsnszbLKTzyqJV17w2q.png",
-    first: "Andrew",
-    last: "Petersen",
+    "name": "千葉県",
+    "first": "千葉",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/907a-400o400o2-9TM2CCmvrw6ttmJiTw4Lz8.jpg",
-    first: "Scott",
-    last: "Smerchek",
-    twitter: "@smerchek",
+    "name": "東京都",
+    "first": "東京",
+    "last": "都",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/08be-400o400o2-WtYGFFR1ZUJHL9tKyVBNPV.jpg",
-    first: "Giovanni",
-    last: "Benussi",
-    twitter: "@giovannibenussi",
+    "name": "神奈川県",
+    "first": "神奈川",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/f814-400o400o2-n2ua5nM9qwZA2hiGdr1T7N.jpg",
-    first: "Igor",
-    last: "Minar",
-    twitter: "@IgorMinar",
+    "name": "新潟県",
+    "first": "新潟",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/fb82-400o400o2-LbvwhTVMrYLDdN3z4iEFMp.jpeg",
-    first: "Brandon",
-    last: "Kish",
+    "name": "富山県",
+    "first": "富山",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/fcda-400o400o2-XiYRtKK5Dvng5AeyC8PiUA.png",
-    first: "Arisa",
-    last: "Fukuzaki",
-    twitter: "@arisa_dev",
+    "name": "石川県",
+    "first": "石川",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/c8c3-400o400o2-PR5UsgApAVEADZRixV4H8e.jpeg",
-    first: "Alexandra",
-    last: "Spalato",
-    twitter: "@alexadark",
+    "name": "福井県",
+    "first": "福井",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/7594-400o400o2-hWtdCjbdFdLgE2vEXBJtyo.jpg",
-    first: "Cat",
-    last: "Johnson",
+    "name": "山梨県",
+    "first": "山梨",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/5636-400o400o2-TWgi8vELMFoB3hB9uPw62d.jpg",
-    first: "Ashley",
-    last: "Narcisse",
-    twitter: "@_darkfadr",
+    "name": "長野県",
+    "first": "長野",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/6aeb-400o400o2-Q5tAiuzKGgzSje9ZsK3Yu5.JPG",
-    first: "Edmund",
-    last: "Hung",
-    twitter: "@_edmundhung",
+    "name": "岐阜県",
+    "first": "岐阜",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/30f1-400o400o2-wJBdJ6sFayjKmJycYKoHSe.jpg",
-    first: "Clifford",
-    last: "Fajardo",
-    twitter: "@cliffordfajard0",
+    "name": "静岡県",
+    "first": "静岡",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/6faa-400o400o2-amseBRDkdg7wSK5tjsFDiG.jpg",
-    first: "Erick",
-    last: "Tamayo",
-    twitter: "@ericktamayo",
+    "name": "愛知県",
+    "first": "愛知",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/feba-400o400o2-R4GE7eqegJNFf3cQ567obs.jpg",
-    first: "Paul",
-    last: "Bratslavsky",
-    twitter: "@codingthirty",
+    "name": "三重県",
+    "first": "三重",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/c315-400o400o2-spjM5A6VVfVNnQsuwvX3DY.jpg",
-    first: "Pedro",
-    last: "Cattori",
-    twitter: "@pcattori",
+    "name": "滋賀県",
+    "first": "滋賀",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/eec1-400o400o2-HkvWKLFqecmFxLwqR9KMRw.jpg",
-    first: "Andre",
-    last: "Landgraf",
-    twitter: "@AndreLandgraf94",
+    "name": "京都府",
+    "first": "京都",
+    "last": "府",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/c73a-400o400o2-4MTaTq6ftC15hqwtqUJmTC.jpg",
-    first: "Monica",
-    last: "Powell",
-    twitter: "@indigitalcolor",
+    "name": "大阪府",
+    "first": "大阪",
+    "last": "府",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/cef7-400o400o2-KBZUydbjfkfGACQmjbHEvX.jpeg",
-    first: "Brian",
-    last: "Lee",
-    twitter: "@brian_dlee",
+    "name": "兵庫県",
+    "first": "兵庫",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/f83b-400o400o2-Pyw3chmeHMxGsNoj3nQmWU.jpg",
-    first: "Sean",
-    last: "McQuaid",
-    twitter: "@SeanMcQuaidCode",
+    "name": "奈良県",
+    "first": "奈良",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/a9fc-400o400o2-JHBnWZRoxp7QX74Hdac7AZ.jpg",
-    first: "Shane",
-    last: "Walker",
-    twitter: "@swalker326",
+    "name": "和歌山県",
+    "first": "和歌山",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
   {
-    avatar:
-      "https://sessionize.com/image/6644-400o400o2-aHnGHb5Pdu3D32MbfrnQbj.jpg",
-    first: "Jon",
-    last: "Jensen",
-    twitter: "@jenseng",
+    "name": "鳥取県",
+    "first": "鳥取",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
   },
+  {
+    "name": "島根県",
+    "first": "島根",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "岡山県",
+    "first": "岡山",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "広島県",
+    "first": "広島",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "山口県",
+    "first": "山口",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "徳島県",
+    "first": "徳島",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "香川県",
+    "first": "香川",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "愛媛県",
+    "first": "愛媛",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "高知県",
+    "first": "高知",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "福岡県",
+    "first": "福岡",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "佐賀県",
+    "first": "佐賀",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "長崎県",
+    "first": "長崎",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "熊本県",
+    "first": "熊本",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "大分県",
+    "first": "大分",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "宮崎県",
+    "first": "宮崎",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "鹿児島県",
+    "first": "鹿児島",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  },
+  {
+    "name": "沖縄県",
+    "first": "沖縄",
+    "last": "県",
+    "arriveFlag": false,
+    "firstDate": null,
+    "avatar": " "
+  }
 ].forEach((contact) => {
   fakeContacts.create({
     ...contact,
-    id: `${contact.first.toLowerCase()}-${contact.last.toLocaleLowerCase()}`,
+    id: `${contact.name.toLowerCase()}`,
   });
 });
