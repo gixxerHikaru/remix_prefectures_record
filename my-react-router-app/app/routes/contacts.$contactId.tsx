@@ -69,7 +69,7 @@ export default function Contact() {
           <Form action="edit">
             <button type="submit">編集</button>
           </Form>
-          
+
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@ const Favorite: FunctionComponent<{
         name="favorite"
         value={favorite ? "false" : "true"}
       >
-        {favorite ? "★" : "☆"}
+        {favorite ? "訪問済" : "未"}
       </button>
     </fetcher.Form>
   );

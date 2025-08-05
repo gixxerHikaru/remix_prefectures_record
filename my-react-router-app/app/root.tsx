@@ -115,7 +115,7 @@ export default function App() {
                         <i>名前なし</i>
                       )}{" "}
                       {contact.favorite ? (
-                        <span>★</span>
+                        <span>訪問済</span>
                       ) : null}
                     </Link>
                     </NavLink>
