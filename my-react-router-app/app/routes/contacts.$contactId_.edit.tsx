@@ -36,6 +36,14 @@ export default function EditContact() {
         <span>{contact.first}{contact.last}</span>
       </p>
       <label>
+        <span>Date</span>
+        <input 
+            defaultValue={contact.firstDate}
+        >
+
+        </input>
+      </label>
+      <label>
         <span>Notes</span>
         <textarea
           defaultValue={contact.notes}

@@ -15,6 +15,7 @@ type ContactMutation = {
   twitter?: string;
   notes?: string;
   favorite?: boolean;
+  firstDate?: string;
 };
 
 type PrefecturesRecord = {
@@ -209,7 +210,7 @@ export async function updateContact(id: string, updates: ContactMutation) {
     "first": "東京",
     "last": "都",
     "arriveFlag": false,
-    "firstDate": null,
+    "firstDate": "2024/07/27",
     "avatar": " "
   },
   {
