@@ -39,6 +39,7 @@ export default function EditContact() {
         <span>Date</span>
         <input 
             defaultValue={contact.firstDate}
+            name="firstDate"
         >
 
         </input>

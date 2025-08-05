@@ -13,7 +13,7 @@ export const action = async ({
     invariant(params.contactId, "Missing contactId param");
     const formData = await request.formData();
     return updateContact(params.contactId, {
-        favorite: formData.get("favorite") === "true",
+        favorite: formData.get("firstDate") != "",
     });
 };
 
@@ -77,25 +77,25 @@ export default function Contact() {
 }
 
 const Favorite: FunctionComponent<{
-  contact: Pick<ContactRecord, "favorite">;
+  contact: Pick<ContactRecord, "firstDate">;
 }> = ({ contact }) => {
   const fetcher = useFetcher();
-  const favorite = fetcher.formData
-    ? fetcher.formData.get("favorite") === "true"
-    : contact.favorite;
+  const firstDate = fetcher.formData
+    ? fetcher.formData.get("firstDate") == ""
+    : contact.firstDate;
 
   return (
     <fetcher.Form method="post">
       <button
         aria-label={
-          favorite
+          firstDate
             ? "お気に入りから削除"
             : "お気に入りに追加"
         }
-        name="favorite"
-        value={favorite ? "false" : "true"}
+        name="firstDate"
+        value={firstDate ? "false" : "true"}
       >
-        {favorite ? "訪問済" : "未"}
+        {firstDate ? "訪問済" : "未"}
       </button>
     </fetcher.Form>
   );
