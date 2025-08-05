@@ -124,7 +124,7 @@ export default function App() {
               </ul>
             ) : (
               <p>
-                <i>連絡先がありません</i>
+                <i>検索結果なし</i>
               </p>
             )}
           </nav>
