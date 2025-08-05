@@ -69,21 +69,7 @@ export default function Contact() {
           <Form action="edit">
             <button type="submit">編集</button>
           </Form>
-
-          <Form
-            action="destroy"
-            method="post"
-            onSubmit={(event) => {
-              const response = confirm(
-                "このレコードを削除してもよろしいですか？"
-              );
-              if (!response) {
-                event.preventDefault();
-              }
-            }}
-          >
-            <button type="submit">削除</button>
-          </Form>
+          
         </div>
       </div>
     </div>

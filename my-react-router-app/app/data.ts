@@ -60,11 +60,6 @@ const fakeContacts = {
     fakeContacts.records[id] = updatedContact;
     return updatedContact;
   },
-
-  destroy(id: string): null {
-    delete fakeContacts.records[id];
-    return null;
-  },
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -98,9 +93,6 @@ export async function updateContact(id: string, updates: ContactMutation) {
   return contact;
 }
 
-export async function deleteContact(id: string) {
-  fakeContacts.destroy(id);
-}
 
 [
   {
